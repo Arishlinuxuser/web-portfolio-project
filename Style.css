@@ -1,0 +1,574 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/*====color section====*/
+:root {
+  --primary-color: #007BFF;
+  --body-bg-color: #f8f9fa;
+  --bg-color: #ffffff;
+  --hover-color: #0056b3;
+  --text-color: #333;
+  --light-text-color: #444;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --dropdown-shadow: rgba(0, 0, 0, 0.2);
+}
+
+body {
+  background-color: var(--body-bg-color);
+  overflow-x: hidden;
+}
+
+/*=====navbar section=====*/
+
+header {
+  width: 100%;
+  background-color: var(--bg-color);
+  box-shadow: 0px 2px 8px var(--shadow-color);
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+}
+
+.navbar {
+  max-width: 1200px;
+  margin: auto;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav_logo {
+ font-size:  1.5rem;
+ font-weight: bold;
+ color: var(--text-color);
+}
+  
+.nav_links ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav_links ul li a {
+  text-decoration: none;
+  color: var(--light-text-color);
+  position: relative;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav_links ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: var(--primary-color);
+  transition: 0.4s ease-in;
+}
+
+.nav_links ul li a:hover {
+  color: var(--primary-color);
+}
+
+.nav_links ul li a:hover::after {
+  width: 100%;
+}
+
+.nav_hamburger {
+  display: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.nav_dropdown {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 70px;
+  background-color: var(--bg-color);
+  box-shadow: 0px 4px 12px var(--dropdown-shadow);
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.nav_dropdown ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.nav_dropdown ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+
+/*====hero section======*/
+
+.hero {
+  padding: 80px 20px;
+  background-color: var(--body-bg-color);
+}
+
+.hero_flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+  gap: 40px;
+  padding-left:  30px;
+  padding-right: 30px;
+}
+
+.hero_text {
+  flex: 1;
+  max-width: 600px;
+}
+.hero_text h1 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.hero_text h2 {
+  font-size: 1.8rem;
+  color: var(--primary-color);
+  margin-bottom: 20px;
+}
+
+.hero_text p {
+  color: var(--light-text-color);
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.hero_btn a {
+  text-decoration: none;
+  padding: 12px 24px;
+  background-color: var(--primary-color);
+ color: #fff;
+ border-radius:  6px;
+ margin-left: 15px;
+ box-shadow: 0px 4px 10px var(--shadow-color);
+ transition: background-color 0.3s ease;
+}
+
+.hero_btn a:hover {
+  background-color: var(--hover-color);
+}
+
+.hero_images img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 6px;
+  box-shadow: 0px 10px 20px var(--shadow-color);
+}
+
+/*========about section=======*/
+
+.about_section {
+  padding: 40px 20px;
+  background-color: var(--body-bg-color);
+  scroll-margin-top: 100px;
+}
+
+.about_container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.about_text {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+  color: var(--text-color);
+}
+
+.about_text h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.about_text p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: var(--light-text-color);
+}
+
+.about_image {
+  flex: 1;
+  text-align: center;
+  min-width: 300px;
+  padding: 20px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px var(--shadow-color);
+}
+
+.about_image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px var(--shadow-color);
+}
+
+/* ======= Education Section ======= */
+.education_section {
+  padding: 40px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  scroll-margin-top: 100px;
+}
+
+.education_section h2 {
+  font-size: 28px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+}
+
+.education_container {
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.education_item {
+  background-color: var(--body-bg-color);
+  padding: 20px;
+  border-left: 5px solid var(--primary-color);
+  box-shadow: 0 2px 6px var(--shadow-color);
+  border-radius: 10px;
+}
+
+.education_item h3 {
+  margin: 0;
+  font-size: 20px;
+  color: var(--hover-color);
+}
+
+.education_institute,
+.education_year {
+  font-size: 14px;
+  color: var(--light-text-color);
+}
+
+.education_desc {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.education_item {
+  animation: fadeInUp 1s ease-in-out both;
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.education_item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-in-out;
+}
+
+.education_item.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*==== My Project Section Styling ====*/
+
+.My_project_secion {
+  padding: 60px 20px;
+  background-color: var(--bg-color);
+  box-shadow: 0 0 10px var(--shadow-color);
+  scroll-margin-top: 100px;
+}
+
+.My_project_secion .section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: var(--text-color);
+  margin-bottom: 40px;
+}
+
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.project-card {
+  background-color: var(--body-bg-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px var(--shadow-color);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px var(--dropdown-shadow);
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.project-card h3 {
+  font-size: 1.4rem;
+  color: var(--primary-color);
+  margin: 16px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: var(--light-text-color);
+  margin: 0 16px 16px 16px;
+}
+
+.project-btn {
+  display: inline-block;
+  margin: 0 16px 20px;
+  padding: 10px 18px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.project-btn:hover {
+  background-color: var(--hover-color);
+}
+
+/*==== Contact Section Styling ====*/
+
+.Contact_section {
+  padding: 60px 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  text-align: center;
+  box-shadow: 0 2px 10px var(--shadow-color);
+  border-radius: 12px;
+  margin-top: 40px;
+  scroll-margin-top: 100px;
+}
+
+.contact-text {
+  font-size: 1.1rem;
+  margin: 10px 0 30px;
+  color: var(--light-text-color);
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+
+.email-link {
+  font-size: 1.1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.email-link:hover {
+  color: var(--hover-color);
+}
+
+.social-links {
+  display: flex;
+  gap: 25px;
+}
+
+.social-links a {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--primary-color);
+}
+
+/* Add icons using Font Awesome */
+.social-links a:nth-child(1)::before {
+  content: "\f09b"; /* GitHub Icon */
+  font-family: "Font Awesome 6 Brands";
+  font-weight: 900;
+  margin-right: 8px;
+}
+
+.social-links a:nth-child(2)::before {
+  content: "\f08c"; /* LinkedIn Icon */
+  font-family: "Font Awesome 6 Brands";
+  margin-right: 8px;
+}
+
+/*==== Footer Section ====*/
+
+.footer {
+  background-color: var(--dark-bg-color);
+  color: var(--light-text-color);
+  padding: 25px 20px;
+  text-align: center;
+  border-top: 2px solid var(--dark-bg-color);
+  margin-top: 60px;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+}
+
+.social-icons a {
+  color: var(--light-text-color);
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--primary-color);
+}
+
+.social-icons a:nth-child(1)::before {
+  content: "\f08c"; /* LinkedIn */
+  font-family: "Font Awesome 6 Brands";
+  margin-right: 8px;
+}
+
+.social-icons a:nth-child(2)::before {
+  content: "\f09b"; /* GitHub */
+  font-family: "Font Awesome 6 Brands";
+  margin-right: 8px;
+}
+
+.social-icons a:nth-child(3)::before {
+  content: "\f099"; /* Twitter */
+  font-family: "Font Awesome 6 Brands";
+  margin-right: 8px;
+}
+
+
+/*=======Responsive design=====*/
+@media (max-width: 768px) {
+  .nav_links {
+    display: none;
+  }
+  .nav_hamburger {
+    display: block;
+  }
+  .nav_dropdown.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero_flex {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero_btn a {
+    display: inline-block;
+    margin: 10px 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about_container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about_container {
+    flex-direction: column;
+  }
+
+  .about_text,
+  .about_image {
+    min-width: auto;
+    width: 100%;
+    padding: 15px;
+  }
+
+  .about_text h2 {
+    font-size: 22px;
+  }
+
+  .about_text p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .social-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .email-link {
+    font-size: 1rem;
+  }
+
+  .social-links a {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .social-icons {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
