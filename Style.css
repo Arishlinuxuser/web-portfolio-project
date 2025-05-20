@@ -230,79 +230,76 @@ header {
   box-shadow: 0px 4px 8px var(--shadow-color);
 }
 
-/* ======= Education Section ======= */
-.education_section {
-  padding: 40px 20px;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+/* =====skill section=======*/
+
+.skill_section {
+  padding: 60px 20px;
+  background-color: #fff;
+  max-width: 800px;
+  margin: 40px auto;
   scroll-margin-top: 100px;
 }
 
-.education_section h2 {
-  font-size: 28px;
+.skill_section h2 {
   text-align: center;
-  margin-bottom: 30px;
-  color: var(--primary-color);
+  font-size: 28px;
+  margin-bottom: 40px;
 }
 
-.education_container {
-  max-width: 1100px;
-  margin: auto;
+.skill {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
-.education_item {
-  background-color: var(--body-bg-color);
-  padding: 20px;
-  border-left: 5px solid var(--primary-color);
-  box-shadow: 0 2px 6px var(--shadow-color);
-  border-radius: 10px;
+.skill-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex: 1;
+  min-width: 200px;
 }
 
-.education_item h3 {
-  margin: 0;
-  font-size: 20px;
-  color: var(--hover-color);
+.skill-info img {
+  width: 40px;
+  height: 40px;
 }
 
-.education_institute,
-.education_year {
-  font-size: 14px;
-  color: var(--light-text-color);
+.skill-info span {
+  font-weight: bold;
+  font-size: 18px;
 }
 
-.education_desc {
-  margin-top: 10px;
-  font-size: 15px;
-  line-height: 1.6;
+.progress-wrapper {
+  display: flex;
+  align-items: center;
+  flex: 2;
+  gap: 10px;
+  min-width: 250px;
 }
 
-.education_item {
-  animation: fadeInUp 1s ease-in-out both;
+.progress-bar {
+  width: 100%;
+  background-color: #eee;
+  border-radius: 20px;
+  overflow: hidden;
+  height: 20px;
 }
 
-@keyframes fadeInUp {
-  from {
-    transform: translateY(30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+.progress {
+  height: 100%;
+  background-color: #4CAF50;
+  border-radius: 20px 0 0 20px;
+  transition: width 1s ease;
 }
 
-.education_item {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.6s ease-in-out;
-}
-
-.education_item.fade-in {
-  opacity: 1;
-  transform: translateY(0);
+.percent {
+  font-weight: bold;
+  min-width: 40px;
+  text-align: right;
 }
 
 /*==== My Project Section Styling ====*/
@@ -571,4 +568,3 @@ header {
     gap: 10px;
   }
 }
-
